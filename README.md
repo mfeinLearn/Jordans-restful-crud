@@ -4,22 +4,48 @@ Jordans RESTful CRUD
 ## Objectives
 
 1. Build RESTful actions for index, show, new, create, edit, update
-2. Use form_for for all forms (no need to share forms or partials)
+2. Should have all CRUD actions 
+2. Use form_for for all forms
 3. Correctly redirect when needed
 4. Interlink between pages using link_to
 
 
 
+## Instructions
+
+You have been given the task to build a Rails app called **Jordans Fly**, the app will need to have two separate models:
+**Jordans Fly** is an app that shows all of shoes an owner's shoe collection via an app
+
+
+The models that you need loo
+* owner
+
+* shoes
+
+
+The data relationship will look something like this:
+
+* A shoe belongs_to an owner
+
+* An owner has_many shoes
+
+(This is a one to many relationship)
+
+
+
+Your database should look like the following:
+
 ```db
-table "artists"
-  string   "name"
-  text     "bio"
-
-table "genres"
+table "owners"
   string   "name"
 
-table "songs"
+table "shoes"
   string   "name"
-  integer  "artist_id"
-  integer  "genre_id"
+  string   "name"
+  string   "size"
+  string   "color"
+  string   "owner_id"
 ```
+
+* You can use the `resource`, `model`, `migration`, and `controller` generators, but do not use the `scaffold` generator
+*Top Tip: Remember to use the --no-test-framework flag when generating models and controllers to avoid generating unnecessary testing frameworks!*
